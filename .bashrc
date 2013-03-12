@@ -18,6 +18,7 @@ alias vimgit='vim -O `git diff --name-only HEAD^`'
 alias vimgitnew='vim -O `git diff --name-only HEAD`'
 alias gitfiles='git diff --name-only HEAD^ | cat'
 alias howfresh="git show --format=%cr | head -n 1"
+alias shortlog="git log --oneline -n 5"
 
 # pipeables
 alias aus='au | sort -n'
@@ -32,6 +33,7 @@ alias linelength="awk '{print length(\$0)}'"
 
 alias bp="bpython"
 
+alias findswp="find . -name '.*.*.swp'"
 export PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
 
 function pythawesome() {
